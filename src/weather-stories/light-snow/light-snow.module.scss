@@ -1,0 +1,51 @@
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.sunContainer {
+  position: absolute;
+  width: 45%;
+  top: 27%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+}
+
+.cloudContainer1 {
+  position: absolute;
+  width: 40%;
+  top: 13%;
+  left: 28%;
+}
+
+.cloudContainer2 {
+  position: absolute;
+  width: 50%;
+  left: 48%;
+  top: 30%;
+}
+
+.cloudContainer3 {
+  position: absolute;
+  width: 70%;
+  top: 21%;
+}
+
+.snowContainer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 45%;
+  display: flex;
+  margin: 0 10%;
+  overflow: hidden;
+  > * + * {
+    margin-left: 1rem;
+  }
+
+  > .snowflake {
+    height: 100%;
+  }
+}

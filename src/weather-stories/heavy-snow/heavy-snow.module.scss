@@ -1,0 +1,108 @@
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.cloud-container {
+  position: absolute;
+  height: 100%;
+
+  .cloud {
+    position: absolute;
+    z-index: 2;
+  }
+
+  &.cloud-container-1 {
+    width: 65%;
+    z-index: 10;
+
+    .cloud {
+      position: absolute;
+      top: 27%;
+    }
+
+    .snow-container {
+      top: 58%;
+      height: 42%;
+    }
+  }
+
+  &.cloud-container-2 {
+    width: 40%;
+    left: 39%;
+    z-index: 8;
+
+    .cloud {
+      position: absolute;
+      top: 21%;
+    }
+
+    .snow-container {
+      top: 36%;
+      height: 64%;
+    }
+  }
+
+  &.cloud-container-3 {
+    width: 50%;
+    left: 51%;
+    z-index: 9;
+
+    .cloud {
+      position: absolute;
+      top: 30%;
+    }
+
+    .snow-container {
+      top: 53%;
+      height: 47%;
+    }
+  }
+
+  &.cloud-container-4 {
+    width: 65%;
+    left: 5%;
+    z-index: 1;
+
+    .cloud {
+      position: absolute;
+      top: 7%;
+    }
+
+    .snow-container {
+      top: 40%;
+      height: 60%;
+    }
+  }
+
+  &.cloud-container-5 {
+    width: 50%;
+    left: 50%;
+    z-index: 6;
+
+    .cloud {
+      position: absolute;
+      top: 5%;
+    }
+
+    .snow-container {
+      top: 28%;
+      height: 72%;
+    }
+  }
+
+  .snow-container {
+    position: absolute;
+    padding-left: 13.33333%;
+    padding-right: 16.66667%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+    overflow: hidden;
+    .snowflake {
+      width: 10%;
+    }
+  }
+}

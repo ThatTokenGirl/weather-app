@@ -1,24 +1,59 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { FunctionComponent } from "react";
+import "./App.css";
+import {
+  PartlyCloudy,
+  Sunny,
+  HeavyRain,
+  LightRain,
+  HeaveSnow,
+  LightSnow,
+  Thunderstorm,
+} from "./weather-stories";
+import { IconProps } from "./weather-icons/types";
+
+const stories: {
+  name: string;
+  component: FunctionComponent<IconProps>;
+}[] = [
+  {
+    name: "Sunny",
+    component: Sunny,
+  },
+  {
+    name: "Partly Cloudy",
+    component: PartlyCloudy,
+  },
+  {
+    name: "Heavy Rain",
+    component: HeavyRain,
+  },
+  {
+    name: "Light Rain",
+    component: LightRain,
+  },
+  {
+    name: "Heavy Snow",
+    component: HeaveSnow,
+  },
+  {
+    name: "Light Snow",
+    component: LightSnow,
+  },
+  {
+    name: "Thunderstorm",
+    component: Thunderstorm,
+  },
+];
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div id="main">
+      {stories.map(({ name, component: Component }, index) => (
+        <div key={index} className="icon">
+          <Component strokeColor="white" fillColor="#2c3e50"></Component>
+          {name}
+        </div>
+      ))}
     </div>
   );
 }

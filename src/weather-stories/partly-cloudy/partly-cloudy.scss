@@ -1,0 +1,76 @@
+@mixin cloudContainer($cloudWidth) {
+  $scaledWidth: 100% * $cloudWidth / ((100 + 2 * $cloudWidth));
+  width: 100% + $cloudWidth * 2 + 2;
+  transform: translate(-1 * $scaledWidth, 0);
+
+  .cloud {
+    width: $scaledWidth;
+  }
+}
+
+.partly-cloudy {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.cloud-container {
+  height: 100%;
+  position: absolute;
+
+  .cloud {
+    position: absolute;
+  }
+
+  &.cloud-container-1 {
+    @include cloudContainer(50);
+    z-index: 10;
+    .cloud {
+      bottom: 12.5%;
+    }
+  }
+
+  &.cloud-container-2 {
+    @include cloudContainer(20);
+    z-index: 5;
+    .cloud {
+      top: 14%;
+    }
+  }
+
+  &.cloud-container-3 {
+    @include cloudContainer(25);
+
+    z-index: 2;
+    .cloud {
+      top: 18%;
+    }
+  }
+
+  &.cloud-container-4 {
+    @include cloudContainer(21);
+
+    z-index: 5;
+    .cloud {
+      top: 45%;
+    }
+  }
+
+  &.cloud-container-2 {
+    @include cloudContainer(10);
+
+    z-index: 1;
+    .cloud {
+      top: 32%;
+    }
+  }
+}
+
+.sun {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 65%;
+}

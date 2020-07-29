@@ -1,0 +1,58 @@
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.thunderbolt1 {
+  position: absolute;
+  transform: rotate(-22deg) scale(0.25, 0.5);
+  height: 50%;
+  top: 54%;
+  animation: flicker 5s ease-in-out 0s infinite;
+}
+
+.thunderbolt2 {
+  position: absolute;
+  transform: rotate(27deg) scale(0.175, 1);
+  height: 50%;
+  top: 43%;
+  animation: flicker 6s ease-in-out 2.2s infinite;
+  left: 55%;
+}
+
+.thunderbolt3 {
+  position: absolute;
+  transform: rotate(0deg) scale(0.1, 0.5);
+  height: 73%;
+  top: 43%;
+  animation: flicker 7.5s ease-in-out 10s infinite;
+  left: -19%;
+}
+
+@keyframes flicker {
+  0% {
+    opacity: 0;
+  }
+  12% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.25;
+  }
+  30% {
+    opacity: 1;
+  }
+  33% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
